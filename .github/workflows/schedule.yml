@@ -1,9 +1,6 @@
 name: Schedule Workflow
 
-on:
-  push:
-  schedule:
-    - cron: '* * * * *'
+on: push
 
 jobs:
   build:
