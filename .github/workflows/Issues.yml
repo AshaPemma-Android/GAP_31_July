@@ -1,6 +1,8 @@
 name: Issues Workflow
 
-on: issues
+on:
+  issues:
+    types: [opened, edited, closed]
 
 jobs:
   build:
