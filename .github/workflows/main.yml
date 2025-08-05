@@ -4,7 +4,7 @@ on: push
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubunu-latest
     steps:
       - name: Print build
         run: echo 'build'
