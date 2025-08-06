@@ -20,8 +20,8 @@ jobs:
           echo 'Run id ${{github.run_id}}'
           echo 'Runner number is ${{github.run_number}}'
 
-      - name: Deploy if on master
-        if: github.ref == 'refs/heads/master'
+      - name: Deploy if on main
+        if: github.ref == 'refs/heads/main'
         run: echo 'deploy'
 
       - name: Triggered by pull request
