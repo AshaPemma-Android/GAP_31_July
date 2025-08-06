@@ -7,7 +7,7 @@ jobs:
   github_context:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Info about Github
+      - name: Print Info about GitHub
         run: |
           echo 'Repository details ${{github.repository}}'
           echo 'Repo id ${{github.repository_id}}'
@@ -20,10 +20,10 @@ jobs:
           echo 'Run id ${{github.run_id}}'
           echo 'Runner number is ${{github.run_number}}'
 
-          name: Examples
+      - name: Deploy if on master
+        if: github.ref == 'refs/heads/master'
+        run: echo 'deploy'
 
-            - if: github.ref == 'refs/heads/master'
-              run: echo 'deploy'
-
-          - if: github.event_name == 'pull_request'
-            run: echo 'trigger the workflow'
+      - name: Triggered by pull request
+        if: github.event_name == 'pull_request'
+        run: echo 'trigger the workflow'
