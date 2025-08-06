@@ -16,4 +16,4 @@ jobs:
         uses: actions/setup-java@v3.14.1
         with:
           java-version: ${{ matrix.java-version }}
-          distributor: microsoft
+          distribution: microsoft
