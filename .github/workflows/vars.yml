@@ -17,5 +17,5 @@ jobs:
           MY_VAR: steps
         run: |
           echo 'Workflow Level: ${{ vars.MY_VAR }}'
-          echo 'Job Level: $MY_VAR'
-          echo 'Step Level: $MY_VAR'
+          echo 'Job Level: ${{ env.MY_VAR }}'
+        
